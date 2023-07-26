@@ -1,0 +1,2 @@
+1 Gigabyte (GB) = 1,000,000,000 bytes (in decimal)
+1 Gibibyte (GiB) = 2^30 bytes = 1,073,741,824 byte
