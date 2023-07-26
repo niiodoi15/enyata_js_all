@@ -1,35 +1,49 @@
+const form = document.getElementById('form').value;
+let submitBtn = document.querySelector('.submit-btn');
 
-class FormHandler {
-    async validateForm() {
-        const firstname = document.getElementById('firstname').value;
-        const lastname = document.getElementById('lastname').value;
-        const age = document.getElementById('age').value;
-        const country = document.getElementById('country').value;
-        const picture = document.getElementById('picture').files[0];
+class Form {
+    constructor(firstname, lastname, age, country, picture) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.country = country;
+        this.picture = picture;
+    }
 
-        // Check if any field is empty
-        if (!firstname || !lastname || !age || !country || !picture) {
-            return false;
+    async validate() {
+
+        let firstname = document.querySelector('.firstname').value;
+        let lastname = document.querySelector('.lastname').value;
+        let age = document.querySelector('.age').value;
+        let country = document.querySelector('.country').value;
+        let picture = document.querySelector('.picture').value;
+
+        if (firstname === '' || lastname === '' || age === '' || country === '' || picture === '') {
+            alert('Fields are empty')
         }
+    }
 
-        // Additional validation can be added here if needed
+    sentence() {
 
-        return true;
+        let firstname = document.querySelector('.firstname').value;
+        let lastname = document.querySelector('.lastname').value;
+        let age = document.querySelector('.age').value;
+        let country = document.querySelector('.country').value;
+        let picture = document.querySelector('.picture').value;
+
+        alert(`My name is ${firstname} ${lastname}. I am from ${country}. I am ${age} years old`);
     }
 }
 
-async function handleSubmit(event) {
-    event.preventDefault();
+const newForms = new Form(firstname, lastname, age, country, picture);
 
-    const formHandler = new FormHandler();
-    const isValid = await formHandler.validateForm();
+submitBtn.addEventListener('click', async function (event) {
+    event.preventDefault;
+    const isValid = await Form.validate();
 
     if (isValid) {
-        // Submit the form or do further processing here
-        console.log('Form is valid. Submitting...');
-        document.getElementById('form').submit(); // Replace this with your desired action
+        return newForms.sentence();
     } else {
         alert('Please fill in all the required fields.');
     }
-}
-
+});

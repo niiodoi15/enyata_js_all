@@ -1,4 +1,4 @@
-const numbers = [5, 3, 2, 8, 1, 4, 6, 7, 9, 10];
+const numbers = [3, 1, 5, 2, 8, 4, 6, 7, 9, 10];
 
 //ascending order
 numbers.sort((a, b) => a - b);
