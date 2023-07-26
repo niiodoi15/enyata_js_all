@@ -1,4 +1,4 @@
-const form = document.getElementById('form').value;
+const form = document.getElementById('form');
 let submitBtn = document.querySelector('.submit-btn');
 
 class Form {
