@@ -3,16 +3,17 @@ Document Object model helps connect web pages to programming
 languages such as JavaScript and PHP
 
 PROMISE
-Promises are objects that represent the outcome of asynchronous 
+Promises are objects that represent the outcome of a future action. of asynchronous 
 operations. Promises have three states: pending, fulfilled, and 
-rejected.
+rejected. Promises are actions to be used in the future.
 
 
 
 Object Oriented Programming
 Object-oriented programming (OOP) is a computer programming 
 model that organizes software design around data, or objects, 
-rather than functions and logic.
+rather than functions and logic. An object can be defined as 
+a data field that has unique attributes and behavior.
 
 CALLBACK
 Callback is a function that is called into another function as
